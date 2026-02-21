@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Tracker</title>
+
+    <!-- tailwind + daisy -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="w-[70%] mx-auto bg-[#F8FAFC]">
+    <header>
+        <h1 class="text-3xl text-black font-bold mt-16 mb-5">Job Application Tracker</h1>
+        <div class="grid grid-cols-3 gap-4">
+            <div class="bg-gray-100 p-5 rounded-[8px]">
+                <p class="text-[0.87rem] text-gray-500 font-medium">Total</p>
+                <p id="total" class="text-black font-bold">0</p>
+            </div>
+            <div class="bg-gray-100 p-5 rounded-[8px]">
+                <p class="text-[0.87rem] text-gray-500 font-medium">Interview</p>
+                <p id="interview-count" class="text-green-500 font-bold">0</p>
+            </div>
+            <div class="bg-gray-100 p-5 rounded-[8px]">
+                <p class="text-[0.87rem] text-gray-500 font-medium">Rejected</p>
+                <p id="reject-count" class="text-red-500 font-bold">0</p>
+            </div>
+        </div>
+    </header>
+
+    <hr class="text-[#E6E7E9] my-8">
+
+    <main>
+        <div class="flex justify-between mb-6">
+            <h3 class="text-2xl font-bold text-black">Available Jobs</h3>
+            <p class="text-gray-500"><span>0</span> jobs</p>
+        </div>
+
+        <div class="space-x-2 mb-4">
+            <button id="all-filter-btn" class="btn btn-primary px-8 py-2.5">All</button>
+            <button id="interview-filter-btn" class="btn btn-soft bg-gray-200 text-gray-500">Interview</button>
+            <button id="reject-filter-btn" class="btn btn-soft bg-gray-200 text-gray-500">Rejected</button>
+        </div>
+
+        <section id="all-cards">
+            <div class="card bg-[#FFFFFF]">
+                <div>
+                    <div>
+                        <div>
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="/script.js"></script>
+</body>
+</html>
