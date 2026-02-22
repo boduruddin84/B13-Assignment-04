@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 </head>
-<body class="w-[70%] mx-auto bg-[#F8FAFC]">
+<body class="w-[90%] md:w-[70%] mx-auto bg-[#F8FAFC]">
     <header>
         <h1 class="text-3xl text-black font-bold mt-16 mb-5">Job Application Tracker</h1>
         <div class="grid grid-cols-3 gap-4">
@@ -46,26 +46,30 @@
             <button onclick="toggleStyle('reject-filter-btn')" id="reject-filter-btn" class="btn btn-soft bg-gray-200 text-gray-500">Rejected</button>
         </div>
 
+        <section id="filtered-section" class="hidden">
+
+        </section>
+
         <section id="all-cards" class="space-y-4">
             <div class="card bg-[#FFFFFF] rounded-[8px]">
                 <div>
                     <div class="flex justify-between px-6 pt-6 pb-5">
                         <div>
-                            <h3 class="text-2xl font-bold text-black">Mobile First Corp</h3>
-                            <p class="text-gray-500">React Native Developer</p>
+                            <h3 class="job-name text-2xl font-bold text-black">Mobile First Corp</h3>
+                            <p class="job-post  text-gray-500">React Native Developer</p>
                         </div>
-                        <button class="btn btn-soft"><img src="./assets/Group 1.png" alt=""></button>
+                        <button class="job-deleted btn btn-soft"><img src="./assets/Group 1.png" alt=""></button>
                     </div>
 
-                    <p class="text-gray-500 pb-5 px-6">Remote • 
+                    <p class="job-type text-gray-500 pb-5 px-6">Remote • 
 Full-time 
 •
  $130,000 - $175,000</p>
-                    <button class="btn btn-soft text-xl uppercase text-black  bg-[#EEF4FF] mx-6">Not Applied</button>
-                    <p class="pt-2 pb-5 text-gray-500 px-6">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    <button class="application-status btn btn-soft text-xl uppercase text-black  bg-[#EEF4FF] mx-6">Not Applied</button>
+                    <p class="job-description pt-2 pb-5 text-gray-500 px-6">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                     <div class="px-6 pb-6">
-                        <button class="btn btn-soft border-green-500 text-green-500">interview</button>
-                        <button class="btn btn-soft border-red-500 text-red-500">Rejected</button>
+                        <button class="job-interview btn btn-soft border-green-500 text-green-500">interview</button>
+                        <button class="job-rejected btn btn-soft border-red-500 text-red-500">Rejected</button>
                     </div>
                 </div>
                 <div>
@@ -76,22 +80,22 @@ Full-time
                 <div>
                     <div class="flex justify-between px-6 pt-6 pb-5">
                         <div>
-                            <h3 class="text-2xl font-bold text-black">WebFlow Agency</h3>
-                            <p class="text-gray-500">Web Designer & Developer</p>
+                            <h3 class="job-name text-2xl font-bold text-black">WebFlow Agency</h3>
+                            <p class="job-post text-gray-500">Web Designer & Developer</p>
                         </div>
-                        <button class="btn btn-soft"><img src="./assets/Group 1.png" alt=""></button>
+                        <button class="job-deleted btn btn-soft"><img src="./assets/Group 1.png" alt=""></button>
                     </div>
 
-                    <p class="text-gray-500 pb-5 px-6">Los Angeles, CA
+                    <p class="job-type text-gray-500 pb-5 px-6">Los Angeles, CA
  • 
 Part-time 
 •
  $80,000 - $120,000</p>
-                    <button class="btn btn-soft text-xl uppercase text-black  bg-[#EEF4FF] mx-6">Not Applied</button>
-                    <p class="pt-2 pb-5 text-gray-500 px-6">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+                    <button class="application-status btn btn-soft text-xl uppercase text-black  bg-[#EEF4FF] mx-6">Not Applied</button>
+                    <p class="job-description pt-2 pb-5 text-gray-500 px-6">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
                     <div class="px-6 pb-6">
-                        <button class="btn btn-soft border-green-500 text-green-500">interview</button>
-                        <button class="btn btn-soft border-red-500 text-red-500">Rejected</button>
+                        <button class="job-interview btn btn-soft border-green-500 text-green-500">interview</button>
+                        <button class="job-rejected btn btn-soft border-red-500 text-red-500">Rejected</button>
                     </div>
                 </div>
                 <div>
@@ -102,23 +106,23 @@ Part-time
                 <div>
                     <div class="flex justify-between px-6 pt-6 pb-5">
                         <div>
-                            <h3 class="text-2xl font-bold text-black">DataViz Solutions</h3>
-                            <p class="text-gray-500">Data Visualization Specialist</p>
+                            <h3 class="job-name text-2xl font-bold text-black">DataViz Solutions</h3>
+                            <p class="job-post text-gray-500">Data Visualization Specialist</p>
                         </div>
-                        <button class="btn btn-soft"><img src="./assets/Group 1.png" alt=""></button>
+                        <button class="job-deleted btn btn-soft"><img src="./assets/Group 1.png" alt=""></button>
                     </div>
 
-                    <p class="text-gray-500 pb-5 px-6">Boston, MA 
+                    <p class="job-type text-gray-500 pb-5 px-6">Boston, MA 
 •
  Full-time
  •
  $125,000 - $165,000</p>
-                    <button class="btn btn-soft text-xl uppercase text-black  bg-[#EEF4FF] mx-6">Not Applied</button>
-                    <p class="pt-2 pb-5 text-gray-500 px-6">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.
+                    <button class="application-status btn btn-soft text-xl uppercase text-black  bg-[#EEF4FF] mx-6">Not Applied</button>
+                    <p class="job-description pt-2 pb-5 text-gray-500 px-6">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.
 </p>
-                    <div class="px-6 pb-6">
-                        <button class="btn btn-soft border-green-500 text-green-500">interview</button>
-                        <button class="btn btn-soft border-red-500 text-red-500">Rejected</button>
+                    <div class=" px-6 pb-6">
+                        <button class=" job-interview btn btn-soft border-green-500 text-green-500">interview</button>
+                        <button class="job-rejected btn btn-soft border-red-500 text-red-500">Rejected</button>
                     </div>
                 </div>
                 <div>
@@ -129,22 +133,22 @@ Part-time
                 <div>
                     <div class="flex justify-between px-6 pt-6 pb-5">
                         <div>
-                            <h3 class="text-2xl font-bold text-black">CloudFirst Inc</h3>
-                            <p class="text-gray-500">Backend Developer</p>
+                            <h3 class="job-name text-2xl font-bold text-black">CloudFirst Inc</h3>
+                            <p class="job-post text-gray-500">Backend Developer</p>
                         </div>
-                        <button class="btn btn-soft"><img src="./assets/Group 1.png" alt=""></button>
+                        <button class="job-deleted btn btn-soft"><img src="./assets/Group 1.png" alt=""></button>
                     </div>
 
-                    <p class="text-gray-500 pb-5 px-6">Seattle, WA
+                    <p class="job-type text-gray-500 pb-5 px-6">Seattle, WA
  •
  Full-time
  •
  $140,000 - $190,000</p>
-                    <button class="btn btn-soft text-xl uppercase text-black  bg-[#EEF4FF] mx-6">Not Applied</button>
-                    <p class="pt-2 pb-5 text-gray-500 px-6">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
+                    <button class="application-status btn btn-soft text-xl uppercase text-black  bg-[#EEF4FF] mx-6">Not Applied</button>
+                    <p class="job-description pt-2 pb-5 text-gray-500 px-6">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
                     <div class="px-6 pb-6">
-                        <button class="btn btn-soft border-green-500 text-green-500">interview</button>
-                        <button class="btn btn-soft border-red-500 text-red-500">Rejected</button>
+                        <button class=" job-interview btn btn-soft border-green-500 text-green-500">interview</button>
+                        <button class="job-rejected btn btn-soft border-red-500 text-red-500">Rejected</button>
                     </div>
                 </div>
                 <div>
@@ -155,22 +159,22 @@ Part-time
                 <div>
                     <div class="flex justify-between px-6 pt-6 pb-5">
                         <div>
-                            <h3 class="text-2xl font-bold text-black">Innovation Labs</h3>
-                            <p class="text-gray-500">UI/UX Engineer</p>
+                            <h3 class="job-name text-2xl font-bold text-black">Innovation Labs</h3>
+                            <p class="job-post text-gray-500">UI/UX Engineer</p>
                         </div>
-                        <button class="btn btn-soft"><img src="./assets/Group 1.png" alt=""></button>
+                        <button class="job-deleted btn btn-soft"><img src="./assets/Group 1.png" alt=""></button>
                     </div>
 
-                    <p class="text-gray-500 pb-5 px-6">Austin, TX
+                    <p class="job-type text-gray-500 pb-5 px-6">Austin, TX
  •
  Full-time
  •
  $110,000 - $150,000</p>
-                    <button class="btn btn-soft text-xl uppercase text-black  bg-[#EEF4FF] mx-6">Not Applied</button>
-                    <p class="pt-2 pb-5 text-gray-500 px-6">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
+                    <button class="application-status btn btn-soft text-xl uppercase text-black  bg-[#EEF4FF] mx-6">Not Applied</button>
+                    <p class="job-description pt-2 pb-5 text-gray-500 px-6">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
                     <div class="px-6 pb-6">
-                        <button class="btn btn-soft border-green-500 text-green-500">interview</button>
-                        <button class="btn btn-soft border-red-500 text-red-500">Rejected</button>
+                        <button class="job-interview btn btn-soft border-green-500 text-green-500">interview</button>
+                        <button class="job-rejected btn btn-soft border-red-500 text-red-500">Rejected</button>
                     </div>
                 </div>
                 <div>
@@ -181,22 +185,22 @@ Part-time
                 <div>
                     <div class="flex justify-between px-6 pt-6 pb-5">
                         <div>
-                            <h3 class="text-2xl font-bold text-black">MegaCorp Solutions</h3>
-                            <p class="text-gray-500">JavaScript Developer</p>
+                            <h3 class=" job-name text-2xl font-bold text-black">MegaCorp Solutions</h3>
+                            <p class="job-post text-gray-500">JavaScript Developer</p>
                         </div>
-                        <button class="btn btn-soft"><img src="./assets/Group 1.png" alt=""></button>
+                        <button class="job-deleted btn btn-soft"><img src="./assets/Group 1.png" alt=""></button>
                     </div>
 
-                    <p class="text-gray-500 pb-5 px-6">New York, NY
+                    <p class="job-type text-gray-500 pb-5 px-6">New York, NY
  • 
 Full-time 
 •
  $130,000 - $170,00</p>
-                    <button class="btn btn-soft text-xl uppercase text-black  bg-[#EEF4FF] mx-6">Not Applied</button>
-                    <p class="pt-2 pb-5 text-gray-500 px-6">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
+                    <button class="application-status btn btn-soft text-xl uppercase text-black  bg-[#EEF4FF] mx-6">Not Applied</button>
+                    <p class="job-description pt-2 pb-5 text-gray-500 px-6">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
                     <div class="px-6 pb-6">
-                        <button class="btn btn-soft border-green-500 text-green-500">interview</button>
-                        <button class="btn btn-soft border-red-500 text-red-500">Rejected</button>
+                        <button class="job-interview btn btn-soft border-green-500 text-green-500">interview</button>
+                        <button class="job-rejected btn btn-soft border-red-500 text-red-500">Rejected</button>
                     </div>
                 </div>
                 <div>
@@ -207,22 +211,22 @@ Full-time
                 <div>
                     <div class="flex justify-between px-6 pt-6 pb-5">
                         <div>
-                            <h3 class="text-2xl font-bold text-black">StartupXYZ</h3>
-                            <p class="text-gray-500">Full Stack Engineer</p>
+                            <h3 class="job-name text-2xl font-bold text-black">StartupXYZ</h3>
+                            <p class="job-post text-gray-500">Full Stack Engineer</p>
                         </div>
-                        <button class="btn btn-soft"><img src="./assets/Group 1.png" alt=""></button>
+                        <button class="job-deleted btn btn-soft"><img src="./assets/Group 1.png" alt=""></button>
                     </div>
 
-                    <p class="text-gray-500 pb-5 px-6">Remote
+                    <p class="job-type text-gray-500 pb-5 px-6">Remote
  • 
 Full-time 
 •
  $120,000 - $160,000</p>
-                    <button class="btn btn-soft text-xl uppercase text-black  bg-[#EEF4FF] mx-6">Not Applied</button>
-                    <p class="pt-2 pb-5 text-gray-500 px-6">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
+                    <button class="application-status btn btn-soft text-xl uppercase text-black  bg-[#EEF4FF] mx-6">Not Applied</button>
+                    <p class="job-description pt-2 pb-5 text-gray-500 px-6">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
                     <div class="px-6 pb-6">
-                        <button class="btn btn-soft border-green-500 text-green-500">interview</button>
-                        <button class="btn btn-soft border-red-500 text-red-500">Rejected</button>
+                        <button class="job-interview btn btn-soft border-green-500 text-green-500">interview</button>
+                        <button class="job-rejected btn btn-soft border-red-500 text-red-500">Rejected</button>
                     </div>
                 </div>
                 <div>
@@ -233,22 +237,22 @@ Full-time
                 <div>
                     <div class="flex justify-between px-6 pt-6 pb-5">
                         <div>
-                            <h3 class="text-2xl font-bold text-black">TechCorp Industries</h3>
-                            <p class="text-gray-500">Senior Frontend Developer</p>
+                            <h3 class="job-name text-2xl font-bold text-black">TechCorp Industries</h3>
+                            <p class="job-post text-gray-500">Senior Frontend Developer</p>
                         </div>
-                        <button class="btn btn-soft"><img src="./assets/Group 1.png" alt=""></button>
+                        <button class="job-deleted btn btn-soft"><img src="./assets/Group 1.png" alt=""></button>
                     </div>
 
-                    <p class="text-gray-500 pb-5 px-6">San Francisco, CA
+                    <p class="job-type text-gray-500 pb-5 px-6">San Francisco, CA
  • 
 Full-time 
 •
  $130,000 - $175,000</p>
-                    <button class="btn btn-soft text-xl uppercase text-black  bg-[#EEF4FF] mx-6">Not Applied</button>
-                    <p class="pt-2 pb-5 text-gray-500 px-6">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
+                    <button class="application-status btn btn-soft text-xl uppercase text-black  bg-[#EEF4FF] mx-6">Not Applied</button>
+                    <p class="job-description pt-2 pb-5 text-gray-500 px-6">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
                     <div class="px-6 pb-6">
-                        <button class="btn btn-soft border-green-500 text-green-500">interview</button>
-                        <button class="btn btn-soft border-red-500 text-red-500">Rejected</button>
+                        <button class="job-interview btn btn-soft border-green-500 text-green-500">interview</button>
+                        <button class="job-rejected btn btn-soft border-red-500 text-red-500">Rejected</button>
                     </div>
                 </div>
                 <div>
