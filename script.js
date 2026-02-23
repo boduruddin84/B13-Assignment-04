@@ -110,7 +110,7 @@ mainContainer.addEventListener("click", function (event) {
     const parentNode = event.target.parentNode.parentNode;
     const jobName = parentNode.querySelector(".job-name").innerText;
     const jobPost = parentNode.querySelector(".job-post").innerText;
-    const jobType = parentNode.querySelector(".job-type").innerText;
+    const jobType = parentNode.querySelector(".job-type").innerText; 
     const applicationStatus = parentNode.querySelector(
       ".application-status",
     ).innerText;
@@ -146,15 +146,12 @@ mainContainer.addEventListener("click", function (event) {
 
     calculateCount();  
     
-    
   }
-
 
   else if (event.target.closest(".job-deleted")) {
 
-  const parentCard = event.target.closest(".card");
-
-  const jobName = parentCard.querySelector(".job-name").innerText;
+  const Card = event.target.closest(".card");
+  const jobName = Card.querySelector(".job-name").innerText;
 
   
   interviewList = interviewList.filter(item => item.jobName != jobName);
@@ -163,7 +160,22 @@ mainContainer.addEventListener("click", function (event) {
   rejectList = rejectList.filter(item => item.jobName != jobName);
 
  
+  if (allCardSection.contains(Card)) {
+    jobCountNumber--;
+  }
+
   
+  Card.remove();
+
+  calculateCount();
+
+  
+  if (currentStatus == "interview-filter-btn") {
+    renderInterview();
+  } 
+  else if (currentStatus == "reject-filter-btn") {
+    renderRejected();
+  }
 }
 });
 
