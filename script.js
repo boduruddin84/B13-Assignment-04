@@ -26,6 +26,7 @@ function calculateCount() {
   rejectCount.innerText = rejectList.length;
 }
 
+
 calculateCount();
 
 function toggleStyle(id) {
@@ -57,9 +58,8 @@ function toggleStyle(id) {
     filterSection.classList.remove('hidden');
     renderRejected();
   }
+
 }
-
-
 
 
 mainContainer.addEventListener("click", function (event) {
@@ -104,6 +104,7 @@ mainContainer.addEventListener("click", function (event) {
 
 
     calculateCount();
+
   }
 
   else if (event.target.classList.contains("job-rejected")) {
@@ -164,7 +165,6 @@ mainContainer.addEventListener("click", function (event) {
     jobCountNumber--;
   }
 
-  
   Card.remove();
 
   calculateCount();
@@ -244,6 +244,7 @@ function renderRejected() {
         filterSection.appendChild(div);
   }
 }
+
 
 
 
