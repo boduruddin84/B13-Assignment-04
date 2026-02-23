@@ -148,6 +148,23 @@ mainContainer.addEventListener("click", function (event) {
     
     
   }
+
+
+  else if (event.target.closest(".job-deleted")) {
+
+  const parentCard = event.target.closest(".card");
+
+  const jobName = parentCard.querySelector(".job-name").innerText;
+
+  
+  interviewList = interviewList.filter(item => item.jobName != jobName);
+
+  
+  rejectList = rejectList.filter(item => item.jobName != jobName);
+
+ 
+  
+}
 });
 
 function renderInterview() {
@@ -215,3 +232,7 @@ function renderRejected() {
         filterSection.appendChild(div);
   }
 }
+
+
+
+
