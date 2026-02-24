@@ -6,6 +6,7 @@ let total = document.getElementById("total");
 let totalJobs = document.getElementById("total-jobs");
 let interviewCount = document.getElementById("interview-count");
 let rejectCount = document.getElementById("reject-count");
+let noJobs = document.getElementById("no-jobs");
 
 const allFilterBtn = document.getElementById("all-filter-btn");
 const interviewFilterBtn = document.getElementById("interview-filter-btn");
@@ -16,6 +17,7 @@ const mainContainer = document.querySelector("main");
 
 const filterSection = document.getElementById("filtered-section");
 
+
 let jobCountNumber = allCardSection.children.length;
 
 function calculateCount() {
@@ -25,7 +27,6 @@ function calculateCount() {
   interviewCount.innerText = interviewList.length;
   rejectCount.innerText = rejectList.length;
 }
-
 
 calculateCount();
 
@@ -57,6 +58,11 @@ function toggleStyle(id) {
     allCardSection.classList.add('hidden');
     filterSection.classList.remove('hidden');
     renderRejected();
+  }
+  else if(id == 'all-filter-btn') {
+  allCardSection.classList.remove('hidden');
+  filterSection.classList.add('hidden');
+  noJobs.classList.add('hidden');
   }
 
 }
@@ -182,6 +188,15 @@ mainContainer.addEventListener("click", function (event) {
 function renderInterview() {
   filterSection.innerHTML = "";
 
+  if (interviewList.length == 0) {
+    noJobs.classList.remove('hidden');
+    filterSection.classList.add('hidden');
+    return;
+  } else {
+    noJobs.classList.add('hidden');
+    filterSection.classList.remove('hidden');
+  }
+
   for (let interview of interviewList) {
     let div = document.createElement("div");
     div.className = "card bg-[#FFFFFF] rounded-[8px]";
@@ -215,6 +230,15 @@ function renderInterview() {
 function renderRejected() {
   filterSection.innerHTML = "";
 
+   if (rejectList.length == 0) {
+    noJobs.classList.remove('hidden');
+    filterSection.classList.add('hidden');
+    return;
+  } else {
+    noJobs.classList.add('hidden');
+    filterSection.classList.remove('hidden');
+  }
+
   for (let reject of rejectList) {
     let div = document.createElement("div");
     div.className = "card bg-[#FFFFFF] rounded-[8px]";
@@ -244,6 +268,8 @@ function renderRejected() {
         filterSection.appendChild(div);
   }
 }
+
+
 
 
 
