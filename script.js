@@ -191,7 +191,6 @@ function renderInterview() {
   if (interviewList.length == 0) {
     noJobs.classList.remove('hidden');
     filterSection.classList.add('hidden');
-    return;
   } else {
     noJobs.classList.add('hidden');
     filterSection.classList.remove('hidden');
@@ -233,8 +232,8 @@ function renderRejected() {
    if (rejectList.length == 0) {
     noJobs.classList.remove('hidden');
     filterSection.classList.add('hidden');
-    return;
-  } else {
+  } 
+  else {
     noJobs.classList.add('hidden');
     filterSection.classList.remove('hidden');
   }
