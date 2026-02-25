@@ -53,16 +53,12 @@ function toggleStyle(id) {
   else if(id == 'all-filter-btn') {
     allCardSection.classList.remove('hidden');
     filterSection.classList.add('hidden');
+    noJobs.classList.add('hidden');
   }
   else if(id == 'reject-filter-btn') {
     allCardSection.classList.add('hidden');
     filterSection.classList.remove('hidden');
     renderRejected();
-  }
-  else if(id == 'all-filter-btn') {
-  allCardSection.classList.remove('hidden');
-  filterSection.classList.add('hidden');
-  noJobs.classList.add('hidden');
   }
 
 }
