@@ -7,6 +7,8 @@ let totalJobs = document.getElementById("total-jobs");
 let interviewCount = document.getElementById("interview-count");
 let rejectCount = document.getElementById("reject-count");
 let noJobs = document.getElementById("no-jobs");
+let interviewJobs =document.getElementById('interview-jobs')
+let rejectJobs =document.getElementById('reject-jobs')
 
 const allFilterBtn = document.getElementById("all-filter-btn");
 const interviewFilterBtn = document.getElementById("interview-filter-btn");
@@ -21,6 +23,7 @@ const filterSection = document.getElementById("filtered-section");
 let jobCountNumber = allCardSection.children.length;
 
 function calculateCount() {
+
   total.innerText = jobCountNumber;
   totalJobs.innerText = jobCountNumber;
 
@@ -104,8 +107,8 @@ mainContainer.addEventListener("click", function (event) {
       renderRejected();
     }
 
-
     calculateCount();
+
 
   }
 
